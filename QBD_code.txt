@@ -1,0 +1,25 @@
+address  
+-  
+AREA varchar(5) PK  
+AREA_NAME varchar(50)  
+
+crime  
+-  
+Crm_Cd varchar(5) PK  
+Crm_Cd_Desc varchar(100)  
+
+location  
+-  
+LOCATION varchar(50) PK  
+LAT decimal(9,6)  
+LON decimal(9,6)  
+
+crimedata  
+-  
+DR_NO varchar(10) PK  
+Date_Rptd DATE  
+Date_Occ DATE  
+Time_Occ TIME  
+AREA varchar(5) FK >- address.AREA  
+Crm_Cd varchar(5) FK >- crime.Crm_Cd  
+LOCATION varchar(50) FK >- location.LOCATION  
